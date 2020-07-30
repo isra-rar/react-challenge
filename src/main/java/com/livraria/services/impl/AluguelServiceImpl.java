@@ -4,11 +4,8 @@ import com.livraria.dto.AluguelDTO;
 import com.livraria.dto.ClienteDTO;
 import com.livraria.dto.LivroDTO;
 import com.livraria.entities.Aluguel;
-import com.livraria.entities.Cliente;
-import com.livraria.entities.Livro;
 import com.livraria.mappers.AluguelMapper;
 import com.livraria.repositories.AluguelRepository;
-import com.livraria.repositories.ClienteRepository;
 import com.livraria.repositories.LivroRepository;
 import com.livraria.services.AluguelService;
 import com.livraria.services.ClienteService;
@@ -22,9 +19,8 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
+import java.time.LocalDateTime;
+import java.util.*;
 
 @Service
 public class AluguelServiceImpl extends GenericServiceImpl<AluguelRepository, AluguelMapper> implements AluguelService {
@@ -54,6 +50,7 @@ public class AluguelServiceImpl extends GenericServiceImpl<AluguelRepository, Al
 
     @Override
     public AluguelDTO insert(AluguelDTO objDto) {
+
         ClienteDTO clienteDTO = clienteService.getById(objDto.getCliente().getId());
 
         List<LivroDTO> livroDTOS = new ArrayList<>();
@@ -63,6 +60,9 @@ public class AluguelServiceImpl extends GenericServiceImpl<AluguelRepository, Al
 
         Aluguel obj = getModelMapper().aluguelDtoToAluguel(objDto);
 
+        obj.setDiaAlugado(LocalDateTime.now());
+        obj.setDiaDevolucao(obj.getDiaAlugado().plusDays(7));
+
         obj.setId(null);
         obj.getLivros().forEach(l -> livroRepository.getOne(l.getId()).setQuantidade((l.getQuantidade() - 1)));
         obj.setValorAlugel(obj.getLivros().stream().mapToDouble((v) -> v.getValor()).sum());
@@ -70,6 +70,13 @@ public class AluguelServiceImpl extends GenericServiceImpl<AluguelRepository, Al
 
         Aluguel aluguel = getRepository().save(obj);
         return getModelMapper().aluguelToAluguelDTO(aluguel);
+    }
+
+    @Override
+    public void devolucaoAluguel(Long id) {
+        AluguelDTO aluguelDTO = getById(id);
+        aluguelDTO.getLivros().forEach(l -> livroRepository.getOne(l.getId()).setQuantidade((l.getQuantidade() + 1)));
+        getRepository().save(getModelMapper().aluguelDtoToAluguel(aluguelDTO));
     }
 
     @Override

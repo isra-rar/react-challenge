@@ -14,6 +14,8 @@ public interface AluguelService extends GenericService {
 
     AluguelDTO insert(AluguelDTO objDto);
 
+    void devolucaoAluguel(Long id);
+
     void update(AluguelDTO objDto, Long id);
 
     void delete(Long id);

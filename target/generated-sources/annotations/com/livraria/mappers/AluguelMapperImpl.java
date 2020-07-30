@@ -17,7 +17,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2020-07-29T05:32:45-0300",
+    date = "2020-07-30T00:18:22-0300",
     comments = "version: 1.3.1.Final, compiler: javac, environment: Java 1.8.0_252 (Private Build)"
 )
 @Component
@@ -34,6 +34,8 @@ public class AluguelMapperImpl implements AluguelMapper {
         aluguelDTO.setId( aluguel.getId() );
         aluguelDTO.setCliente( clienteToClienteDTO( aluguel.getCliente() ) );
         aluguelDTO.setLivros( livroListToLivroDTOList( aluguel.getLivros() ) );
+        aluguelDTO.setDiaAlugado( aluguel.getDiaAlugado() );
+        aluguelDTO.setDiaDevolucao( aluguel.getDiaDevolucao() );
         aluguelDTO.setValorAluguel( aluguel.getValorAluguel() );
 
         return aluguelDTO;
@@ -50,6 +52,8 @@ public class AluguelMapperImpl implements AluguelMapper {
         aluguel.setId( aluguelDTO.getId() );
         aluguel.setCliente( clienteDTOToCliente( aluguelDTO.getCliente() ) );
         aluguel.setLivros( livroDTOListToLivroList( aluguelDTO.getLivros() ) );
+        aluguel.setDiaAlugado( aluguelDTO.getDiaAlugado() );
+        aluguel.setDiaDevolucao( aluguelDTO.getDiaDevolucao() );
         aluguel.setValorAluguel( aluguelDTO.getValorAluguel() );
 
         return aluguel;

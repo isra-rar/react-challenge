@@ -1,7 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="5b7f6d8e-1b01-4d59-9686-be3ecd273af9" name="Default Changelist" comment="" />
+    <list default="true" id="5b7f6d8e-1b01-4d59-9686-be3ecd273af9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/2d110592-cd93-445d-a0ad-f40892ce02bc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/2d110592-cd93-445d-a0ad-f40892ce02bc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/livraria/controllers/AluguelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/livraria/controllers/AluguelController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/livraria/dto/AluguelDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/livraria/dto/AluguelDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/livraria/entities/Aluguel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/livraria/entities/Aluguel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/livraria/services/AluguelService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/livraria/services/AluguelService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/livraria/services/impl/AluguelServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/livraria/services/impl/AluguelServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/livraria/ApplicationLivraria.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/livraria/ApplicationLivraria.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/livraria/configurations/DataBaseProperties.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/livraria/configurations/DataBaseProperties.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/livraria/configurations/DefaultConfiguration$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/livraria/configurations/DefaultConfiguration$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/livraria/configurations/SwaggerConfig$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/livraria/configurations/SwaggerConfig$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/livraria/controllers/AluguelController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/livraria/controllers/AluguelController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/livraria/controllers/AutorController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/livraria/controllers/AutorController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/livraria/controllers/ClienteController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/livraria/controllers/ClienteController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/livraria/controllers/EnderecoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/livraria/controllers/EnderecoController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/livraria/controllers/LivroController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/livraria/controllers/LivroController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/livraria/controllers/expections/FieldMessage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/livraria/controllers/expections/FieldMessage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/livraria/controllers/expections/ResourceExceptionHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/livraria/controllers/expections/ResourceExceptionHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/livraria/controllers/expections/StandardError.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/livraria/controllers/expections/StandardError.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/livraria/controllers/expections/ValidationError.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/livraria/controllers/expections/ValidationError.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/livraria/dto/AluguelDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/livraria/dto/AluguelDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/livraria/dto/AutorDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/livraria/dto/AutorDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/livraria/dto/ClienteDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/livraria/dto/ClienteDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/livraria/dto/EnderecoDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/livraria/dto/EnderecoDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/livraria/dto/LivroDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/livraria/dto/LivroDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/livraria/entities/Aluguel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/livraria/entities/Aluguel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/livraria/entities/Autor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/livraria/entities/Autor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/livraria/entities/Cliente.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/livraria/entities/Cliente.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/livraria/entities/Endereco.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/livraria/entities/Endereco.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/livraria/entities/Livro.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/livraria/entities/Livro.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/livraria/enums/CategoriaEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/livraria/enums/CategoriaEnum.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/livraria/enums/SexoEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/livraria/enums/SexoEnum.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/livraria/mappers/AluguelMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/livraria/mappers/AluguelMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/livraria/mappers/AluguelMapperImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/livraria/mappers/AluguelMapperImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/livraria/mappers/AutorMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/livraria/mappers/AutorMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/livraria/mappers/AutorMapperImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/livraria/mappers/AutorMapperImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/livraria/mappers/ClienteMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/livraria/mappers/ClienteMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/livraria/mappers/ClienteMapperImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/livraria/mappers/ClienteMapperImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/livraria/mappers/EnderecoMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/livraria/mappers/EnderecoMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/livraria/mappers/EnderecoMapperImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/livraria/mappers/EnderecoMapperImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/livraria/mappers/LivroMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/livraria/mappers/LivroMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/livraria/mappers/LivroMapperImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/livraria/mappers/LivroMapperImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/livraria/repositories/AluguelRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/livraria/repositories/AluguelRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/livraria/repositories/AutorRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/livraria/repositories/AutorRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/livraria/repositories/ClienteRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/livraria/repositories/ClienteRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/livraria/repositories/EnderecoRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/livraria/repositories/EnderecoRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/livraria/repositories/LivroRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/livraria/repositories/LivroRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/livraria/services/AluguelService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/livraria/services/AluguelService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/livraria/services/AutorService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/livraria/services/AutorService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/livraria/services/ClienteService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/livraria/services/ClienteService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/livraria/services/EnderecoService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/livraria/services/EnderecoService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/livraria/services/LivroService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/livraria/services/LivroService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/livraria/services/excepctions/DataIntegrityException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/livraria/services/excepctions/DataIntegrityException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/livraria/services/excepctions/ObjectNotFoundException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/livraria/services/excepctions/ObjectNotFoundException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/livraria/services/impl/AluguelServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/livraria/services/impl/AluguelServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/livraria/services/impl/AutorServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/livraria/services/impl/AutorServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/livraria/services/impl/ClienteServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/livraria/services/impl/ClienteServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/livraria/services/impl/EnderecoServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/livraria/services/impl/EnderecoServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/livraria/services/impl/LivroServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/livraria/services/impl/LivroServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/com/livraria/mappers/AluguelMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/com/livraria/mappers/AluguelMapperImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/com/livraria/mappers/AutorMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/com/livraria/mappers/AutorMapperImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/com/livraria/mappers/ClienteMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/com/livraria/mappers/ClienteMapperImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/com/livraria/mappers/EnderecoMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/com/livraria/mappers/EnderecoMapperImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/com/livraria/mappers/LivroMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/com/livraria/mappers/LivroMapperImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/livraria-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/livraria-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/livraria-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/livraria-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.livraria.ApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.livraria.ApplicationTests.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.livraria.ApplicationTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.livraria.ApplicationTests.txt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,6 +89,13 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="$USER_HOME$/.m2/wrapper/dists/apache-maven-3.6.3-bin/1iopthnavndlasol9gbrbg6bf2/apache-maven-3.6.3" />
+      </MavenGeneralSettings>
+    </option>
   </component>
   <component name="ProjectId" id="1eVtkk6bASSoIuMpRyoTgCu6BPB" />
   <component name="ProjectLevelVcsManager">
@@ -36,7 +115,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../rentacar-challeng-genreal" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.0" />
@@ -58,6 +137,7 @@
       </method>
     </configuration>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -73,91 +153,103 @@
       <workItem from="1594561142010" duration="780000" />
       <workItem from="1594570455857" duration="46000" />
       <workItem from="1594595672911" duration="80000" />
-      <workItem from="1596000430609" duration="11460000" />
+      <workItem from="1596000430609" duration="13435000" />
+      <workItem from="1596073685365" duration="4743000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2198" y="168" width="800" height="673" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1596001768240">
       <screen x="1920" y="140" width="1366" height="768" />
     </state>
     <state x="2198" y="168" width="800" height="673" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.140.1366.768/0.168.1920.684@1920.140.1366.768" timestamp="1596001768240" />
-    <state x="2411" y="183" width="374" height="624" key="#com.intellij.ide.util.MemberChooser" timestamp="1596011534249">
-      <screen x="1920" y="140" width="1366" height="768" />
+    <state x="491" y="66" width="374" height="624" key="#com.intellij.ide.util.MemberChooser" timestamp="1596079440192">
+      <screen x="0" y="28" width="1366" height="684" />
     </state>
     <state x="2411" y="183" width="374" height="624" key="#com.intellij.ide.util.MemberChooser/1920.140.1366.768/0.168.1920.684@1920.140.1366.768" timestamp="1596011534249" />
+    <state x="491" y="66" width="374" height="624" key="#com.intellij.ide.util.MemberChooser/1920.140.1366.768/0.28.1366.684@0.28.1366.684" timestamp="1596079440192" />
     <state x="2057" y="168" width="1081" height="684" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1596003678620">
       <screen x="1920" y="140" width="1366" height="768" />
     </state>
     <state x="2057" y="168" width="1081" height="684" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/1920.140.1366.768/0.168.1920.684@1920.140.1366.768" timestamp="1596003678620" />
-    <state x="2336" y="244" width="524" height="501" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog" timestamp="1596004566334">
-      <screen x="1920" y="140" width="1366" height="768" />
+    <state x="416" y="121" width="524" height="501" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog" timestamp="1596077993993">
+      <screen x="0" y="28" width="1366" height="684" />
     </state>
     <state x="2336" y="244" width="524" height="501" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/1920.140.1366.768/0.168.1920.684@1920.140.1366.768" timestamp="1596004566334" />
+    <state x="416" y="121" width="524" height="501" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/1920.140.1366.768/0.28.1366.684@0.28.1366.684" timestamp="1596077993993" />
     <state x="2642" y="387" key="#xdebugger.evaluate" timestamp="1596011503385">
       <screen x="1920" y="140" width="1366" height="768" />
     </state>
     <state x="2642" y="387" key="#xdebugger.evaluate/1920.140.1366.768/0.168.1920.684@1920.140.1366.768" timestamp="1596011503385" />
-    <state x="2386" y="273" width="424" height="480" key="FileChooserDialogImpl" timestamp="1596001643404">
-      <screen x="1920" y="140" width="1366" height="768" />
+    <state x="466" y="146" width="424" height="480" key="FileChooserDialogImpl" timestamp="1596077928466">
+      <screen x="0" y="28" width="1366" height="684" />
     </state>
     <state x="2386" y="273" key="FileChooserDialogImpl/1920.140.1366.768/0.168.1920.684@1920.140.1366.768" timestamp="1596001643404" />
     <state x="2386" y="273" width="424" height="480" key="FileChooserDialogImpl/1920.140.1366.768/0.186.1920.684@1920.140.1366.768" timestamp="1594595749476" />
-    <state width="1314" height="236" key="GridCell.Tab.0.bottom" timestamp="1596011653671">
-      <screen x="1920" y="140" width="1366" height="768" />
+    <state x="466" y="146" key="FileChooserDialogImpl/1920.140.1366.768/0.28.1366.684@0.28.1366.684" timestamp="1596077928466" />
+    <state width="1314" height="189" key="GridCell.Tab.0.bottom" timestamp="1596079324233">
+      <screen x="0" y="28" width="1366" height="684" />
     </state>
-    <state width="1314" height="236" key="GridCell.Tab.0.bottom/1920.140.1366.768/0.168.1920.684@1920.140.1366.768" timestamp="1596011653671" />
-    <state width="1314" height="236" key="GridCell.Tab.0.center" timestamp="1596011653671">
-      <screen x="1920" y="140" width="1366" height="768" />
+    <state width="1314" height="236" key="GridCell.Tab.0.bottom/1920.140.1366.768/0.168.1920.684@1920.140.1366.768" timestamp="1596073651122" />
+    <state width="1314" height="189" key="GridCell.Tab.0.bottom/1920.140.1366.768/0.28.1366.684@0.28.1366.684" timestamp="1596079324233" />
+    <state width="1314" height="189" key="GridCell.Tab.0.center" timestamp="1596079324233">
+      <screen x="0" y="28" width="1366" height="684" />
     </state>
-    <state width="1314" height="236" key="GridCell.Tab.0.center/1920.140.1366.768/0.168.1920.684@1920.140.1366.768" timestamp="1596011653671" />
-    <state width="1314" height="236" key="GridCell.Tab.0.left" timestamp="1596011653671">
-      <screen x="1920" y="140" width="1366" height="768" />
+    <state width="1314" height="236" key="GridCell.Tab.0.center/1920.140.1366.768/0.168.1920.684@1920.140.1366.768" timestamp="1596073651122" />
+    <state width="1314" height="189" key="GridCell.Tab.0.center/1920.140.1366.768/0.28.1366.684@0.28.1366.684" timestamp="1596079324233" />
+    <state width="1314" height="189" key="GridCell.Tab.0.left" timestamp="1596079324233">
+      <screen x="0" y="28" width="1366" height="684" />
     </state>
-    <state width="1314" height="236" key="GridCell.Tab.0.left/1920.140.1366.768/0.168.1920.684@1920.140.1366.768" timestamp="1596011653671" />
-    <state width="1314" height="236" key="GridCell.Tab.0.right" timestamp="1596011653671">
-      <screen x="1920" y="140" width="1366" height="768" />
+    <state width="1314" height="236" key="GridCell.Tab.0.left/1920.140.1366.768/0.168.1920.684@1920.140.1366.768" timestamp="1596073651122" />
+    <state width="1314" height="189" key="GridCell.Tab.0.left/1920.140.1366.768/0.28.1366.684@0.28.1366.684" timestamp="1596079324233" />
+    <state width="1314" height="189" key="GridCell.Tab.0.right" timestamp="1596079324233">
+      <screen x="0" y="28" width="1366" height="684" />
     </state>
-    <state width="1314" height="236" key="GridCell.Tab.0.right/1920.140.1366.768/0.168.1920.684@1920.140.1366.768" timestamp="1596011653671" />
-    <state width="1314" height="236" key="GridCell.Tab.1.bottom" timestamp="1596011653672">
-      <screen x="1920" y="140" width="1366" height="768" />
+    <state width="1314" height="236" key="GridCell.Tab.0.right/1920.140.1366.768/0.168.1920.684@1920.140.1366.768" timestamp="1596073651122" />
+    <state width="1314" height="189" key="GridCell.Tab.0.right/1920.140.1366.768/0.28.1366.684@0.28.1366.684" timestamp="1596079324233" />
+    <state width="1314" height="189" key="GridCell.Tab.1.bottom" timestamp="1596079324233">
+      <screen x="0" y="28" width="1366" height="684" />
     </state>
     <state width="1868" height="589" key="GridCell.Tab.1.bottom/1920.140.1366.768/0.168.1920.684@0.168.1920.684" timestamp="1596005020168" />
-    <state width="1314" height="236" key="GridCell.Tab.1.bottom/1920.140.1366.768/0.168.1920.684@1920.140.1366.768" timestamp="1596011653672" />
-    <state width="1314" height="236" key="GridCell.Tab.1.center" timestamp="1596011653672">
-      <screen x="1920" y="140" width="1366" height="768" />
+    <state width="1314" height="236" key="GridCell.Tab.1.bottom/1920.140.1366.768/0.168.1920.684@1920.140.1366.768" timestamp="1596073651122" />
+    <state width="1314" height="189" key="GridCell.Tab.1.bottom/1920.140.1366.768/0.28.1366.684@0.28.1366.684" timestamp="1596079324233" />
+    <state width="1314" height="189" key="GridCell.Tab.1.center" timestamp="1596079324233">
+      <screen x="0" y="28" width="1366" height="684" />
     </state>
     <state width="1868" height="589" key="GridCell.Tab.1.center/1920.140.1366.768/0.168.1920.684@0.168.1920.684" timestamp="1596005020168" />
-    <state width="1314" height="236" key="GridCell.Tab.1.center/1920.140.1366.768/0.168.1920.684@1920.140.1366.768" timestamp="1596011653672" />
-    <state width="1314" height="236" key="GridCell.Tab.1.left" timestamp="1596011653672">
-      <screen x="1920" y="140" width="1366" height="768" />
+    <state width="1314" height="236" key="GridCell.Tab.1.center/1920.140.1366.768/0.168.1920.684@1920.140.1366.768" timestamp="1596073651122" />
+    <state width="1314" height="189" key="GridCell.Tab.1.center/1920.140.1366.768/0.28.1366.684@0.28.1366.684" timestamp="1596079324233" />
+    <state width="1314" height="189" key="GridCell.Tab.1.left" timestamp="1596079324233">
+      <screen x="0" y="28" width="1366" height="684" />
     </state>
     <state width="1868" height="589" key="GridCell.Tab.1.left/1920.140.1366.768/0.168.1920.684@0.168.1920.684" timestamp="1596005020168" />
-    <state width="1314" height="236" key="GridCell.Tab.1.left/1920.140.1366.768/0.168.1920.684@1920.140.1366.768" timestamp="1596011653672" />
-    <state width="1314" height="236" key="GridCell.Tab.1.right" timestamp="1596011653672">
-      <screen x="1920" y="140" width="1366" height="768" />
+    <state width="1314" height="236" key="GridCell.Tab.1.left/1920.140.1366.768/0.168.1920.684@1920.140.1366.768" timestamp="1596073651122" />
+    <state width="1314" height="189" key="GridCell.Tab.1.left/1920.140.1366.768/0.28.1366.684@0.28.1366.684" timestamp="1596079324233" />
+    <state width="1314" height="189" key="GridCell.Tab.1.right" timestamp="1596079324233">
+      <screen x="0" y="28" width="1366" height="684" />
     </state>
     <state width="1868" height="589" key="GridCell.Tab.1.right/1920.140.1366.768/0.168.1920.684@0.168.1920.684" timestamp="1596005020168" />
-    <state width="1314" height="236" key="GridCell.Tab.1.right/1920.140.1366.768/0.168.1920.684@1920.140.1366.768" timestamp="1596011653672" />
-    <state width="1314" height="236" key="GridCell.Tab.2.bottom" timestamp="1596011653672">
+    <state width="1314" height="236" key="GridCell.Tab.1.right/1920.140.1366.768/0.168.1920.684@1920.140.1366.768" timestamp="1596073651122" />
+    <state width="1314" height="189" key="GridCell.Tab.1.right/1920.140.1366.768/0.28.1366.684@0.28.1366.684" timestamp="1596079324233" />
+    <state width="1314" height="236" key="GridCell.Tab.2.bottom" timestamp="1596073651122">
       <screen x="1920" y="140" width="1366" height="768" />
     </state>
-    <state width="1314" height="236" key="GridCell.Tab.2.bottom/1920.140.1366.768/0.168.1920.684@1920.140.1366.768" timestamp="1596011653672" />
-    <state width="1314" height="236" key="GridCell.Tab.2.center" timestamp="1596011653672">
+    <state width="1314" height="236" key="GridCell.Tab.2.bottom/1920.140.1366.768/0.168.1920.684@1920.140.1366.768" timestamp="1596073651122" />
+    <state width="1314" height="236" key="GridCell.Tab.2.center" timestamp="1596073651122">
       <screen x="1920" y="140" width="1366" height="768" />
     </state>
-    <state width="1314" height="236" key="GridCell.Tab.2.center/1920.140.1366.768/0.168.1920.684@1920.140.1366.768" timestamp="1596011653672" />
-    <state width="1314" height="236" key="GridCell.Tab.2.left" timestamp="1596011653672">
+    <state width="1314" height="236" key="GridCell.Tab.2.center/1920.140.1366.768/0.168.1920.684@1920.140.1366.768" timestamp="1596073651122" />
+    <state width="1314" height="236" key="GridCell.Tab.2.left" timestamp="1596073651122">
       <screen x="1920" y="140" width="1366" height="768" />
     </state>
-    <state width="1314" height="236" key="GridCell.Tab.2.left/1920.140.1366.768/0.168.1920.684@1920.140.1366.768" timestamp="1596011653672" />
-    <state width="1314" height="236" key="GridCell.Tab.2.right" timestamp="1596011653672">
+    <state width="1314" height="236" key="GridCell.Tab.2.left/1920.140.1366.768/0.168.1920.684@1920.140.1366.768" timestamp="1596073651122" />
+    <state width="1314" height="236" key="GridCell.Tab.2.right" timestamp="1596073651122">
       <screen x="1920" y="140" width="1366" height="768" />
     </state>
-    <state width="1314" height="236" key="GridCell.Tab.2.right/1920.140.1366.768/0.168.1920.684@1920.140.1366.768" timestamp="1596011653672" />
+    <state width="1314" height="236" key="GridCell.Tab.2.right/1920.140.1366.768/0.168.1920.684@1920.140.1366.768" timestamp="1596073651122" />
     <state width="335" height="564" key="HiddenNamespacesPopup" timestamp="1596001776033">
       <screen x="1920" y="140" width="1366" height="768" />
     </state>
@@ -170,10 +262,11 @@
       <screen x="1920" y="140" width="1366" height="768" />
     </state>
     <state x="2499" y="376" width="197" height="238" key="com.intellij.database.actions.DdlActions$CreateObject$1/1920.140.1366.768/0.168.1920.684@1920.140.1366.768" timestamp="1596007602757" />
-    <state x="2473" y="392" width="377" height="254" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1596011166771">
-      <screen x="1920" y="140" width="1366" height="768" />
+    <state x="553" y="252" width="377" height="254" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1596079148046">
+      <screen x="0" y="28" width="1366" height="684" />
     </state>
     <state x="2473" y="392" width="377" height="254" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/1920.140.1366.768/0.168.1920.684@1920.140.1366.768" timestamp="1596011166771" />
+    <state x="553" y="252" width="377" height="254" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/1920.140.1366.768/0.28.1366.684@0.28.1366.684" timestamp="1596079148046" />
     <state x="2423" y="248" width="363" height="493" key="com.intellij.database.actions.ToolActions$ScriptingActionBase$MyDatabaseScriptDialog" timestamp="1596007754037">
       <screen x="1920" y="140" width="1366" height="768" />
     </state>
@@ -190,13 +283,13 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/com/livraria/services/impl/AluguelServiceImpl.java</url>
-          <line>67</line>
-          <properties>
-            <option name="lambda-ordinal" value="-1" />
+          <line>45</line>
+          <properties class="com.livraria.services.impl.AluguelServiceImpl" method="getAll">
+            <option name="EMULATED" value="true" />
           </properties>
-          <option name="timeStamp" value="6" />
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

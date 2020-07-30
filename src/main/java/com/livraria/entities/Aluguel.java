@@ -2,9 +2,8 @@ package com.livraria.entities;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
+import java.time.LocalDateTime;
+import java.util.*;
 
 @Entity
 public class Aluguel implements Serializable {
@@ -18,6 +17,10 @@ public class Aluguel implements Serializable {
 
     @ManyToMany
     private List<Livro> livrosList = new ArrayList<>();
+
+    private LocalDateTime diaAlugado;
+
+    private LocalDateTime diaDevolucao;
 
     private Double valorAluguel;
 
@@ -46,6 +49,22 @@ public class Aluguel implements Serializable {
 
     public void setLivros(List<Livro> livrosList) {
         this.livrosList = livrosList;
+    }
+
+    public LocalDateTime getDiaAlugado() {
+        return diaAlugado;
+    }
+
+    public void setDiaAlugado(LocalDateTime diaAlugado) {
+        this.diaAlugado = diaAlugado;
+    }
+
+    public LocalDateTime getDiaDevolucao() {
+        return diaDevolucao;
+    }
+
+    public void setDiaDevolucao(LocalDateTime diaDevolucao) {
+        this.diaDevolucao = diaDevolucao;
     }
 
     public Double getValorAluguel() {

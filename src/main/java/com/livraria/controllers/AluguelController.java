@@ -46,6 +46,13 @@ public class AluguelController extends GenericController<AluguelService> {
         return ResponseEntity.created(uri).body(aluguelDTO);
     }
 
+    @GetMapping(value = "alugueis/devolucao/{id}")
+    public ResponseEntity<Void> devolucaoLivros(@PathVariable Long id){
+        getService().devolucaoAluguel(id);
+        return ResponseEntity.noContent().build();
+    }
+
+
     @PutMapping(value = "/alugueis/{id}")
     public ResponseEntity<Void> update(@RequestBody AluguelDTO obj, @PathVariable Long id) {
         getService().update(obj, id);
