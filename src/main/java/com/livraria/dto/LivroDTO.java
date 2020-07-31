@@ -14,6 +14,8 @@ public class LivroDTO implements Serializable {
     private Double valor;
     private Integer quantidade;
 
+    private Integer unidsReserva;
+
     private AutorDTO autor;
 
     public LivroDTO() {
@@ -65,5 +67,13 @@ public class LivroDTO implements Serializable {
 
     public void setAutor(AutorDTO autor) {
         this.autor = autor;
+    }
+
+    public Integer getUnidsReserva() {
+        return unidsReserva;
+    }
+
+    public void setUnidsReserva(Integer unidsReserva) {
+        this.unidsReserva = unidsReserva;
     }
 }

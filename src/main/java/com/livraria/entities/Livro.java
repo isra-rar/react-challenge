@@ -21,6 +21,8 @@ public class Livro implements Serializable {
     private Double valor;
     private Integer quantidade;
 
+    private Integer unidsReserva;
+
     @ManyToOne(cascade = CascadeType.ALL)
     private Autor autor;
 
@@ -73,6 +75,14 @@ public class Livro implements Serializable {
 
     public void setAutor(Autor autor) {
         this.autor = autor;
+    }
+
+    public Integer getUnidsReserva() {
+        return unidsReserva;
+    }
+
+    public void setUnidsReserva(Integer unidsReserva) {
+        this.unidsReserva = unidsReserva;
     }
 
     @Override

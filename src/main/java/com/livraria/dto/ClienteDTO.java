@@ -36,6 +36,7 @@ public class ClienteDTO implements Serializable {
     @Valid
     private List<EnderecoDTO> enderecos = new ArrayList<>();
 
+
     public ClienteDTO() {
     }
 

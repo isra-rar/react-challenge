@@ -12,9 +12,11 @@ public interface AluguelService extends GenericService {
 
     List<AluguelDTO> getAll();
 
-    AluguelDTO insert(AluguelDTO objDto);
+    AluguelDTO insertAluguel(AluguelDTO objDto);
 
     void devolucaoAluguel(Long id);
+
+    AluguelDTO transformarReservaEmAluguel(Long id);
 
     void update(AluguelDTO objDto, Long id);
 

@@ -26,6 +26,9 @@ public class Cliente implements Serializable {
     @OneToMany(mappedBy = "cliente")
     private List<Aluguel> aluguels = new ArrayList<>();
 
+    @OneToMany(mappedBy = "cliente")
+    private List<Reserva> reservas = new ArrayList<>();
+
     public Cliente() {
     }
 
@@ -91,6 +94,14 @@ public class Cliente implements Serializable {
 
     public void setAluguels(List<Aluguel> aluguels) {
         this.aluguels = aluguels;
+    }
+
+    public List<Reserva> getReservas() {
+        return reservas;
+    }
+
+    public void setReservas(List<Reserva> reservas) {
+        this.reservas = reservas;
     }
 
     @Override

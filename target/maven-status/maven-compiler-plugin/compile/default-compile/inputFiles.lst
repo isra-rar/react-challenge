@@ -1,5 +1,6 @@
 /home/israelrodrigues/Documentos/livraria2.0/src/main/java/com/livraria/entities/Cliente.java
 /home/israelrodrigues/Documentos/livraria2.0/src/main/java/com/livraria/mappers/AluguelMapper.java
+/home/israelrodrigues/Documentos/livraria2.0/src/main/java/com/livraria/controllers/ReservaController.java
 /home/israelrodrigues/Documentos/livraria2.0/src/main/java/com/livraria/controllers/AutorController.java
 /home/israelrodrigues/Documentos/livraria2.0/src/main/java/com/livraria/enums/CategoriaEnum.java
 /home/israelrodrigues/Documentos/livraria2.0/src/main/java/com/livraria/services/excepctions/DataIntegrityException.java
@@ -9,7 +10,9 @@
 /home/israelrodrigues/Documentos/livraria2.0/src/main/java/com/livraria/controllers/AluguelController.java
 /home/israelrodrigues/Documentos/livraria2.0/src/main/java/com/livraria/controllers/expections/StandardError.java
 /home/israelrodrigues/Documentos/livraria2.0/src/main/java/com/livraria/dto/EnderecoDTO.java
+/home/israelrodrigues/Documentos/livraria2.0/src/main/java/com/livraria/repositories/ReservaRepository.java
 /home/israelrodrigues/Documentos/livraria2.0/src/main/java/com/livraria/controllers/expections/ResourceExceptionHandler.java
+/home/israelrodrigues/Documentos/livraria2.0/src/main/java/com/livraria/dto/ReservaDTO.java
 /home/israelrodrigues/Documentos/livraria2.0/src/main/java/com/livraria/entities/Livro.java
 /home/israelrodrigues/Documentos/livraria2.0/src/main/java/com/livraria/repositories/AutorRepository.java
 /home/israelrodrigues/Documentos/livraria2.0/src/main/java/com/livraria/configurations/DefaultConfiguration.java
@@ -21,8 +24,10 @@
 /home/israelrodrigues/Documentos/livraria2.0/src/main/java/com/livraria/services/impl/AluguelServiceImpl.java
 /home/israelrodrigues/Documentos/livraria2.0/src/main/java/com/livraria/configurations/SwaggerConfig.java
 /home/israelrodrigues/Documentos/livraria2.0/src/main/java/com/livraria/services/GenericService.java
+/home/israelrodrigues/Documentos/livraria2.0/src/main/java/com/livraria/mappers/ReservaMapper.java
 /home/israelrodrigues/Documentos/livraria2.0/src/main/java/com/livraria/services/EnderecoService.java
 /home/israelrodrigues/Documentos/livraria2.0/src/main/java/com/livraria/repositories/EnderecoRepository.java
+/home/israelrodrigues/Documentos/livraria2.0/src/main/java/com/livraria/services/ReservaService.java
 /home/israelrodrigues/Documentos/livraria2.0/src/main/java/com/livraria/services/impl/AutorServiceImpl.java
 /home/israelrodrigues/Documentos/livraria2.0/src/main/java/com/livraria/controllers/expections/ValidationError.java
 /home/israelrodrigues/Documentos/livraria2.0/src/main/java/com/livraria/services/ClienteService.java
@@ -36,6 +41,7 @@
 /home/israelrodrigues/Documentos/livraria2.0/src/main/java/com/livraria/services/impl/ClienteServiceImpl.java
 /home/israelrodrigues/Documentos/livraria2.0/src/main/java/com/livraria/controllers/ClienteController.java
 /home/israelrodrigues/Documentos/livraria2.0/src/main/java/com/livraria/services/excepctions/ObjectNotFoundException.java
+/home/israelrodrigues/Documentos/livraria2.0/src/main/java/com/livraria/services/impl/ReservaServiceImpl.java
 /home/israelrodrigues/Documentos/livraria2.0/src/main/java/com/livraria/services/LivroService.java
 /home/israelrodrigues/Documentos/livraria2.0/src/main/java/com/livraria/repositories/AluguelRepository.java
 /home/israelrodrigues/Documentos/livraria2.0/src/main/java/com/livraria/dto/AutorDTO.java
@@ -48,3 +54,4 @@
 /home/israelrodrigues/Documentos/livraria2.0/src/main/java/com/livraria/entities/Aluguel.java
 /home/israelrodrigues/Documentos/livraria2.0/src/main/java/com/livraria/controllers/GenericController.java
 /home/israelrodrigues/Documentos/livraria2.0/src/main/java/com/livraria/dto/AluguelDTO.java
+/home/israelrodrigues/Documentos/livraria2.0/src/main/java/com/livraria/entities/Reserva.java

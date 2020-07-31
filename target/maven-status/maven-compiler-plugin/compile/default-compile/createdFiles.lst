@@ -1,5 +1,6 @@
 com/livraria/repositories/ClienteRepository.class
 com/livraria/entities/Aluguel.class
+com/livraria/entities/Reserva.class
 com/livraria/controllers/LivroController.class
 com/livraria/dto/LivroDTO.class
 com/livraria/configurations/DefaultConfiguration.class
@@ -13,7 +14,9 @@ com/livraria/entities/Livro.class
 com/livraria/mappers/ClienteMapperImpl.class
 com/livraria/entities/Endereco.class
 com/livraria/mappers/AutorMapper.class
+com/livraria/controllers/ReservaController.class
 com/livraria/controllers/expections/FieldMessage.class
+com/livraria/repositories/ReservaRepository.class
 com/livraria/configurations/SwaggerConfig$1.class
 com/livraria/services/AluguelService.class
 com/livraria/services/excepctions/DataIntegrityException.class
@@ -23,6 +26,7 @@ com/livraria/controllers/expections/ValidationError.class
 com/livraria/mappers/AluguelMapperImpl.class
 com/livraria/dto/AutorDTO.class
 com/livraria/configurations/DefaultConfiguration$1.class
+com/livraria/mappers/ReservaMapperImpl.class
 com/livraria/services/impl/ClienteServiceImpl.class
 com/livraria/controllers/ClienteController.class
 com/livraria/services/AutorService.class
@@ -31,17 +35,21 @@ com/livraria/entities/Cliente.class
 com/livraria/controllers/expections/StandardError.class
 com/livraria/services/impl/LivroServiceImpl.class
 com/livraria/dto/AluguelDTO.class
+com/livraria/services/impl/ReservaServiceImpl.class
 com/livraria/services/ClienteService.class
 com/livraria/services/LivroService.class
 com/livraria/configurations/SwaggerConfig.class
+com/livraria/services/ReservaService.class
 com/livraria/controllers/AluguelController.class
 com/livraria/mappers/AutorMapperImpl.class
 com/livraria/repositories/AutorRepository.class
 com/livraria/controllers/AutorController.class
+com/livraria/mappers/ReservaMapper.class
 com/livraria/services/impl/GenericServiceImpl.class
 com/livraria/configurations/DataBaseProperties.class
 com/livraria/mappers/LivroMapper.class
 com/livraria/mappers/EnderecoMapper.class
+com/livraria/dto/ReservaDTO.class
 com/livraria/mappers/ClienteMapper.class
 com/livraria/services/impl/AutorServiceImpl.class
 com/livraria/entities/Autor.class

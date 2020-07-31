@@ -40,7 +40,7 @@ public class AluguelController extends GenericController<AluguelService> {
 
     @PostMapping(value = "/alugueis")
     public ResponseEntity<AluguelDTO> insert(@Valid @RequestBody AluguelDTO objDto) {
-        AluguelDTO aluguelDTO = getService().insert(objDto);
+        AluguelDTO aluguelDTO = getService().insertAluguel(objDto);
         URI uri = ServletUriComponentsBuilder.fromCurrentRequest()
                 .path("/{id}").buildAndExpand(aluguelDTO.getId()).toUri();
         return ResponseEntity.created(uri).body(aluguelDTO);

@@ -3,13 +3,18 @@ package com.livraria.services.impl;
 import com.livraria.dto.AluguelDTO;
 import com.livraria.dto.ClienteDTO;
 import com.livraria.dto.LivroDTO;
+import com.livraria.dto.ReservaDTO;
 import com.livraria.entities.Aluguel;
+import com.livraria.entities.Reserva;
 import com.livraria.mappers.AluguelMapper;
+import com.livraria.mappers.ReservaMapper;
 import com.livraria.repositories.AluguelRepository;
 import com.livraria.repositories.LivroRepository;
+import com.livraria.repositories.ReservaRepository;
 import com.livraria.services.AluguelService;
 import com.livraria.services.ClienteService;
 import com.livraria.services.LivroService;
+import com.livraria.services.ReservaService;
 import com.livraria.services.excepctions.DataIntegrityException;
 import com.livraria.services.excepctions.ObjectNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,6 +39,15 @@ public class AluguelServiceImpl extends GenericServiceImpl<AluguelRepository, Al
     @Autowired
     private LivroRepository livroRepository;
 
+    @Autowired
+    private ReservaService reservaService;
+
+    @Autowired
+    private ReservaRepository reservaRepository;
+
+    @Autowired
+    private ReservaMapper reservaMapper;
+
     @Override
     public AluguelDTO getById(Long id) {
         Optional<Aluguel> obj = getRepository().findById(id);
@@ -49,7 +63,7 @@ public class AluguelServiceImpl extends GenericServiceImpl<AluguelRepository, Al
     }
 
     @Override
-    public AluguelDTO insert(AluguelDTO objDto) {
+    public AluguelDTO insertAluguel(AluguelDTO objDto) {
 
         ClienteDTO clienteDTO = clienteService.getById(objDto.getCliente().getId());
 
@@ -65,10 +79,33 @@ public class AluguelServiceImpl extends GenericServiceImpl<AluguelRepository, Al
 
         obj.setId(null);
         obj.getLivros().forEach(l -> livroRepository.getOne(l.getId()).setQuantidade((l.getQuantidade() - 1)));
+        obj.getLivros().forEach(l -> livroRepository.save(l));
         obj.setValorAlugel(obj.getLivros().stream().mapToDouble((v) -> v.getValor()).sum());
         getRepository().save(obj);
 
         Aluguel aluguel = getRepository().save(obj);
+        return getModelMapper().aluguelToAluguelDTO(aluguel);
+    }
+
+    @Override
+    public AluguelDTO transformarReservaEmAluguel(Long id) {
+        ReservaDTO reservaDTO = reservaService.getById(id);
+        Reserva reserva = reservaMapper.reservaDtoToReserva(reservaDTO);
+        reserva.getLivros().forEach(l -> l.setUnidsReserva(l.getUnidsReserva() - 1));
+        reserva.getLivros().forEach(l -> livroRepository.save(l));
+
+        Aluguel aluguel = getModelMapper().reservaToAluguel(reserva);
+
+        aluguel.setDiaAlugado(LocalDateTime.now());
+        aluguel.setDiaDevolucao(aluguel.getDiaAlugado().plusDays(7));
+
+        aluguel.setId(null);
+
+        aluguel.getLivros().forEach(l -> l.setQuantidade((l.getQuantidade() - 1)));
+        aluguel.getLivros().forEach(l -> livroRepository.save(l));
+        aluguel.setValorAlugel(aluguel.getLivros().stream().mapToDouble((v) -> v.getValor()).sum());
+
+        getRepository().save(aluguel);
         return getModelMapper().aluguelToAluguelDTO(aluguel);
     }
 
@@ -106,5 +143,8 @@ public class AluguelServiceImpl extends GenericServiceImpl<AluguelRepository, Al
     private void updateData(AluguelDTO newObj, AluguelDTO obj) {
         newObj.setCliente(obj.getCliente());
         newObj.setLivros(obj.getLivros());
+        newObj.setDiaDevolucao(obj.getDiaDevolucao());
+        newObj.setValorAluguel(obj.getValorAluguel());
     }
+
 }

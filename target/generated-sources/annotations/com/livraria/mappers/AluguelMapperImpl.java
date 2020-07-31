@@ -10,6 +10,7 @@ import com.livraria.entities.Autor;
 import com.livraria.entities.Cliente;
 import com.livraria.entities.Endereco;
 import com.livraria.entities.Livro;
+import com.livraria.entities.Reserva;
 import java.util.ArrayList;
 import java.util.List;
 import javax.annotation.Generated;
@@ -17,7 +18,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2020-07-30T00:18:22-0300",
+    date = "2020-07-31T01:32:45-0300",
     comments = "version: 1.3.1.Final, compiler: javac, environment: Java 1.8.0_252 (Private Build)"
 )
 @Component
@@ -71,6 +72,24 @@ public class AluguelMapperImpl implements AluguelMapper {
         }
 
         return list;
+    }
+
+    @Override
+    public Aluguel reservaToAluguel(Reserva reserva) {
+        if ( reserva == null ) {
+            return null;
+        }
+
+        Aluguel aluguel = new Aluguel();
+
+        aluguel.setId( reserva.getId() );
+        aluguel.setCliente( reserva.getCliente() );
+        List<Livro> list = reserva.getLivros();
+        if ( list != null ) {
+            aluguel.setLivros( new ArrayList<Livro>( list ) );
+        }
+
+        return aluguel;
     }
 
     protected EnderecoDTO enderecoToEnderecoDTO(Endereco endereco) {
@@ -145,6 +164,7 @@ public class AluguelMapperImpl implements AluguelMapper {
         livroDTO.setValor( livro.getValor() );
         livroDTO.setQuantidade( livro.getQuantidade() );
         livroDTO.setAutor( autorToAutorDTO( livro.getAutor() ) );
+        livroDTO.setUnidsReserva( livro.getUnidsReserva() );
 
         return livroDTO;
     }
@@ -234,6 +254,7 @@ public class AluguelMapperImpl implements AluguelMapper {
         livro.setValor( livroDTO.getValor() );
         livro.setQuantidade( livroDTO.getQuantidade() );
         livro.setAutor( autorDTOToAutor( livroDTO.getAutor() ) );
+        livro.setUnidsReserva( livroDTO.getUnidsReserva() );
 
         return livro;
     }
