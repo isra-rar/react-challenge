@@ -27,6 +27,7 @@ import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
@@ -86,13 +87,14 @@ public class ReservaServiceImpl extends GenericServiceImpl<ReservaRepository, Re
         for (Livro livro : obj.getLivros()) {
             if (livro.getUnidsReserva() == null) {
                 livro.setUnidsReserva(0);
-                livro.setUnidsReserva(livro.getUnidsReserva() + 1);
+            }
+            if (livro.getQuantidade() - livro.getUnidsReserva() <= 0) {
+                throw new DataIntegrityException("O livro: "+ livro.getTitulo() + " está indisponivel. Quantidade para reserva menor que 0");
             } else {
                 livro.setUnidsReserva(livro.getUnidsReserva() + 1);
             }
-            livroRepository.save(livro);
+                livroRepository.save(livro);
         }
-
         obj.setValorTotal(obj.getLivros().stream().mapToDouble((v) -> v.getValor()).sum());
         getRepository().save(obj);
 
@@ -121,10 +123,14 @@ public class ReservaServiceImpl extends GenericServiceImpl<ReservaRepository, Re
     @Override
     public void cancelarReserva(Long id) {
         ReservaDTO reservaDTO = getById(id);
-        reservaDTO.getLivros().forEach(l -> livroService.getById(l.getId()).setUnidsReserva((l.getUnidsReserva() - 1)));
+        reservaDTO.getLivros().forEach(l -> l.setUnidsReserva((l.getUnidsReserva() - 1)));
         reservaDTO.setCancelado(true);
 
-        getRepository().save(getModelMapper().reservaDtoToReserva(reservaDTO));
+        Reserva reserva = getModelMapper().reservaDtoToReserva(reservaDTO);
+        getRepository().save(reserva);
+        for (Livro livro : reserva.getLivros()) {
+            livroRepository.save(livro);
+        }
     }
 
     @Override

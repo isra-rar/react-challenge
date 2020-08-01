@@ -32,14 +32,6 @@ public class Cliente implements Serializable {
     public Cliente() {
     }
 
-    public Cliente(Long id, String nome, String cpf, String email,SexoEnum sexoEnum) {
-        this.id = id;
-        this.nome = nome;
-        this.cpf = cpf;
-        this.email = email;
-        this.sexo = sexoEnum.getCodigo();
-    }
-
     public Long getId() {
         return id;
     }

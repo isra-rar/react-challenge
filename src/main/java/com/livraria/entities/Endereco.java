@@ -23,15 +23,6 @@ public class Endereco implements java.io.Serializable {
     public Endereco() {
     }
 
-    public Endereco(Long id, String logradouro, String numero, String bairro, String cep, Cliente cliente) {
-        this.id = id;
-        this.logradouro = logradouro;
-        this.numero = numero;
-        this.bairro = bairro;
-        this.cep = cep;
-        this.cliente = cliente;
-    }
-
     public Long getId() {
         return id;
     }

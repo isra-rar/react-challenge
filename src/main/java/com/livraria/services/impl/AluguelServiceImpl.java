@@ -5,6 +5,7 @@ import com.livraria.dto.ClienteDTO;
 import com.livraria.dto.LivroDTO;
 import com.livraria.dto.ReservaDTO;
 import com.livraria.entities.Aluguel;
+import com.livraria.entities.Livro;
 import com.livraria.entities.Reserva;
 import com.livraria.mappers.AluguelMapper;
 import com.livraria.mappers.ReservaMapper;
@@ -78,8 +79,21 @@ public class AluguelServiceImpl extends GenericServiceImpl<AluguelRepository, Al
         obj.setDiaDevolucao(obj.getDiaAlugado().plusDays(7));
 
         obj.setId(null);
-        obj.getLivros().forEach(l -> livroRepository.getOne(l.getId()).setQuantidade((l.getQuantidade() - 1)));
-        obj.getLivros().forEach(l -> livroRepository.save(l));
+        obj.getLivros().stream().forEach(l -> {
+
+            if (l.getUnidsReserva() == null) {
+                l.setUnidsReserva(0);
+            }
+            if (l.getQuantidade() - l.getUnidsReserva() <= 0) {
+                throw new DataIntegrityException("O livro: " + l.getTitulo() + " está indisponivel. Quantidade para reserva menor que 0");
+            }
+            if (l.getQuantidade() > 0) {
+                l.setQuantidade(l.getQuantidade() - 1);
+                livroRepository.save(l);
+            } else {
+                throw new DataIntegrityException("O livro: " + l.getTitulo() + " está indisponivel. Quantidade menor que 0");
+            }
+        });
         obj.setValorAlugel(obj.getLivros().stream().mapToDouble((v) -> v.getValor()).sum());
         getRepository().save(obj);
 
@@ -91,8 +105,10 @@ public class AluguelServiceImpl extends GenericServiceImpl<AluguelRepository, Al
     public AluguelDTO transformarReservaEmAluguel(Long id) {
         ReservaDTO reservaDTO = reservaService.getById(id);
         Reserva reserva = reservaMapper.reservaDtoToReserva(reservaDTO);
-        reserva.getLivros().forEach(l -> l.setUnidsReserva(l.getUnidsReserva() - 1));
-        reserva.getLivros().forEach(l -> livroRepository.save(l));
+        reserva.getLivros().stream().forEach(l -> {
+            l.setUnidsReserva(l.getUnidsReserva() - 1);
+            livroRepository.save(l);
+        });
 
         Aluguel aluguel = getModelMapper().reservaToAluguel(reserva);
 
@@ -101,8 +117,14 @@ public class AluguelServiceImpl extends GenericServiceImpl<AluguelRepository, Al
 
         aluguel.setId(null);
 
-        aluguel.getLivros().forEach(l -> l.setQuantidade((l.getQuantidade() - 1)));
-        aluguel.getLivros().forEach(l -> livroRepository.save(l));
+        aluguel.getLivros().stream().forEach(l -> {
+            if (l.getQuantidade() > 0) {
+                l.setQuantidade(l.getQuantidade() - 1);
+                livroRepository.save(l);
+            } else {
+                throw new DataIntegrityException("O livro: " + l.getTitulo() + " está indisponivel. Quantidade menor que 0");
+            }
+        });
         aluguel.setValorAlugel(aluguel.getLivros().stream().mapToDouble((v) -> v.getValor()).sum());
 
         getRepository().save(aluguel);
