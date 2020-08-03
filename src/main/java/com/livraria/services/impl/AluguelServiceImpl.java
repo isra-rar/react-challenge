@@ -96,7 +96,7 @@ public class AluguelServiceImpl extends GenericServiceImpl<AluguelRepository, Al
                 throw new DataIntegrityException("O livro: " + l.getTitulo() + " está indisponivel. Quantidade menor que 0");
             }
         });
-        obj.setValorAlugel(Double.valueOf(formato.format(obj.getLivros().stream().mapToDouble((v) -> v.getValor()).sum())));
+        obj.setValorAlugel(obj.getLivros().stream().mapToDouble((v) -> v.getValor()).sum());
         getRepository().save(obj);
 
         Aluguel aluguel = getRepository().save(obj);
@@ -130,7 +130,7 @@ public class AluguelServiceImpl extends GenericServiceImpl<AluguelRepository, Al
                 throw new DataIntegrityException("O livro: " + l.getTitulo() + " está indisponivel. Quantidade menor que 0");
             }
         });
-        aluguel.setValorAlugel(Double.valueOf(formato.format(aluguel.getLivros().stream().mapToDouble((v) -> v.getValor()).sum())));
+        aluguel.setValorAlugel(aluguel.getLivros().stream().mapToDouble((v) -> v.getValor()).sum());
 
         getRepository().save(aluguel);
         return getModelMapper().aluguelToAluguelDTO(aluguel);
