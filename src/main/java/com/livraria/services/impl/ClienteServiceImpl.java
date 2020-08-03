@@ -6,8 +6,10 @@ import com.livraria.entities.Endereco;
 import com.livraria.mappers.ClienteMapper;
 import com.livraria.repositories.ClienteRepository;
 import com.livraria.services.ClienteService;
+import com.livraria.services.EnderecoService;
 import com.livraria.services.excepctions.DataIntegrityException;
 import com.livraria.services.excepctions.ObjectNotFoundException;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
@@ -21,6 +23,8 @@ import java.util.Optional;
 @Service
 public class ClienteServiceImpl extends GenericServiceImpl<ClienteRepository, ClienteMapper> implements ClienteService {
 
+    @Autowired
+    private EnderecoService enderecoService;
 
     @Override
     public ClienteDTO getById(Long id) {

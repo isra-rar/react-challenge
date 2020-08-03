@@ -3,7 +3,7 @@ package com.livraria.dto;
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 import java.io.Serializable;
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,10 +18,10 @@ public class ReservaDTO implements Serializable {
     private Double valorTotal;
 
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd/MM/yyyy", locale = "pt-br", timezone = "America/Recife")
-    private LocalDateTime diaReserva;
+    private String diaReserva;
 
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd/MM/yyyy", locale = "pt-br", timezone = "America/Recife")
-    private LocalDateTime diaRetirada;
+    private String diaRetirada;
 
     private Boolean retirado;
 
@@ -64,19 +64,19 @@ public class ReservaDTO implements Serializable {
         this.valorTotal = valorTotal;
     }
 
-    public LocalDateTime getDiaReserva() {
+    public String getDiaReserva() {
         return diaReserva;
     }
 
-    public void setDiaReserva(LocalDateTime diaReserva) {
+    public void setDiaReserva(String diaReserva) {
         this.diaReserva = diaReserva;
     }
 
-    public LocalDateTime getDiaRetirada() {
+    public String getDiaRetirada() {
         return diaRetirada;
     }
 
-    public void setDiaRetirada(LocalDateTime diaRetirada) {
+    public void setDiaRetirada(String diaRetirada) {
         this.diaRetirada = diaRetirada;
     }
 

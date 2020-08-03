@@ -1,8 +1,6 @@
 package com.livraria.services.impl;
 
-import com.livraria.dto.ClienteDTO;
 import com.livraria.dto.LivroDTO;
-import com.livraria.entities.Cliente;
 import com.livraria.entities.Livro;
 import com.livraria.mappers.LivroMapper;
 import com.livraria.repositories.AutorRepository;
@@ -17,6 +15,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
+import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
 

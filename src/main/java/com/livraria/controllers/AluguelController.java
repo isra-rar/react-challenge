@@ -51,14 +51,13 @@ public class AluguelController extends GenericController<AluguelService> {
         getService().devolucaoAluguel(id);
         return ResponseEntity.noContent().build();
     }
-
-
+    @CrossOrigin(origins = "*")
     @PutMapping(value = "/alugueis/{id}")
     public ResponseEntity<Void> update(@RequestBody AluguelDTO obj, @PathVariable Long id) {
         getService().update(obj, id);
         return ResponseEntity.noContent().build();
     }
-
+    @CrossOrigin(origins = "*")
     @DeleteMapping(value = "/alugueis/{id}")
     public ResponseEntity<Void> delete(@PathVariable Long id) {
         getService().delete(id);

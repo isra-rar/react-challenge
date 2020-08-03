@@ -12,6 +12,7 @@
 /home/israelrodrigues/Documentos/livraria2.0/src/main/java/com/livraria/dto/EnderecoDTO.java
 /home/israelrodrigues/Documentos/livraria2.0/src/main/java/com/livraria/repositories/ReservaRepository.java
 /home/israelrodrigues/Documentos/livraria2.0/src/main/java/com/livraria/controllers/expections/ResourceExceptionHandler.java
+/home/israelrodrigues/Documentos/livraria2.0/src/main/java/com/livraria/dto/TesteDTO.java
 /home/israelrodrigues/Documentos/livraria2.0/src/main/java/com/livraria/dto/ReservaDTO.java
 /home/israelrodrigues/Documentos/livraria2.0/src/main/java/com/livraria/entities/Livro.java
 /home/israelrodrigues/Documentos/livraria2.0/src/main/java/com/livraria/repositories/AutorRepository.java

@@ -15,6 +15,7 @@ com/livraria/mappers/ClienteMapperImpl.class
 com/livraria/entities/Endereco.class
 com/livraria/mappers/AutorMapper.class
 com/livraria/controllers/ReservaController.class
+com/livraria/dto/TesteDTO.class
 com/livraria/controllers/expections/FieldMessage.class
 com/livraria/repositories/ReservaRepository.class
 com/livraria/configurations/SwaggerConfig$1.class

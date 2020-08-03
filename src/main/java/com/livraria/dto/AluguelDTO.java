@@ -3,7 +3,6 @@ package com.livraria.dto;
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 import java.io.Serializable;
-import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,10 +15,10 @@ public class AluguelDTO implements Serializable {
     private List<LivroDTO> livros = new ArrayList<>();
 
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd/MM/yyyy", locale = "pt-br", timezone = "America/Recife")
-    private LocalDateTime diaAlugado;
+    private String diaAlugado;
 
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd/MM/yyyy", locale = "pt-br", timezone = "America/Recife")
-    private LocalDateTime diaDevolucao;
+    private String diaDevolucao;
 
     private Double valorAluguel;
 
@@ -50,19 +49,19 @@ public class AluguelDTO implements Serializable {
         this.livros = livros;
     }
 
-    public LocalDateTime getDiaAlugado() {
+    public String getDiaAlugado() {
         return diaAlugado;
     }
 
-    public void setDiaAlugado(LocalDateTime diaAlugado) {
+    public void setDiaAlugado(String diaAlugado) {
         this.diaAlugado = diaAlugado;
     }
 
-    public LocalDateTime getDiaDevolucao() {
+    public String getDiaDevolucao() {
         return diaDevolucao;
     }
 
-    public void setDiaDevolucao(LocalDateTime diaDevolucao) {
+    public void setDiaDevolucao(String diaDevolucao) {
         this.diaDevolucao = diaDevolucao;
     }
 

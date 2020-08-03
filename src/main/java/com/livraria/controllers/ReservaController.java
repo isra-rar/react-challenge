@@ -13,6 +13,7 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import javax.validation.Valid;
 import java.net.URI;
+import java.text.ParseException;
 
 @RestController
 @RequestMapping(value = "/api")
@@ -40,7 +41,7 @@ public class ReservaController extends GenericController<ReservaService> {
     }
 
     @PostMapping(value = "/reservas")
-    public ResponseEntity<ReservaDTO> insert(@Valid @RequestBody ReservaDTO objDto) {
+    public ResponseEntity<ReservaDTO> insert(@Valid @RequestBody ReservaDTO objDto) throws ParseException {
         ReservaDTO reservaDTO = getService().insert(objDto);
         URI uri = ServletUriComponentsBuilder.fromCurrentRequest()
                 .path("/{id}").buildAndExpand(reservaDTO.getId()).toUri();
@@ -48,7 +49,7 @@ public class ReservaController extends GenericController<ReservaService> {
     }
 
     @GetMapping(value = "/reservas/retirar/{id}")
-    public ResponseEntity<Void> retirarReserva(@PathVariable Long id){
+    public ResponseEntity<Void> retirarReserva(@PathVariable Long id) throws ParseException {
         getService().retirarReserva(id);
         return ResponseEntity.noContent().build();
     }
@@ -58,13 +59,13 @@ public class ReservaController extends GenericController<ReservaService> {
         getService().cancelarReserva(id);
         return ResponseEntity.noContent().build();
     }
-
+    @CrossOrigin(origins = "*")
     @PutMapping(value = "/reservas/{id}")
     public ResponseEntity<Void> update(@RequestBody ReservaDTO obj, @PathVariable Long id) {
         getService().update(obj, id);
         return ResponseEntity.noContent().build();
     }
-
+    @CrossOrigin(origins = "*")
     @DeleteMapping(value = "/reservas/{id}")
     public ResponseEntity<Void> delete(@PathVariable Long id) {
         getService().delete(id);

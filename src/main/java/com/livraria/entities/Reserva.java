@@ -2,7 +2,7 @@ package com.livraria.entities;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -22,9 +22,9 @@ public class Reserva implements Serializable {
 
     private Double valorTotal;
 
-    private LocalDateTime diaReserva;
+    private String diaReserva;
 
-    private LocalDateTime diaRetirada;
+    private String diaRetirada;
 
     private Boolean retirado;
 
@@ -67,19 +67,19 @@ public class Reserva implements Serializable {
         this.valorTotal = valorTotal;
     }
 
-    public LocalDateTime getDiaReserva() {
+    public String getDiaReserva() {
         return diaReserva;
     }
 
-    public void setDiaReserva(LocalDateTime diaReserva) {
+    public void setDiaReserva(String diaReserva) {
         this.diaReserva = diaReserva;
     }
 
-    public LocalDateTime getDiaRetirada() {
+    public String getDiaRetirada() {
         return diaRetirada;
     }
 
-    public void setDiaRetirada(LocalDateTime diaRetirada) {
+    public void setDiaRetirada(String diaRetirada) {
         this.diaRetirada = diaRetirada;
     }
 

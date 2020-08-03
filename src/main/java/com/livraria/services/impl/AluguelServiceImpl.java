@@ -1,11 +1,7 @@
 package com.livraria.services.impl;
 
-import com.livraria.dto.AluguelDTO;
-import com.livraria.dto.ClienteDTO;
-import com.livraria.dto.LivroDTO;
-import com.livraria.dto.ReservaDTO;
+import com.livraria.dto.*;
 import com.livraria.entities.Aluguel;
-import com.livraria.entities.Livro;
 import com.livraria.entities.Reserva;
 import com.livraria.mappers.AluguelMapper;
 import com.livraria.mappers.ReservaMapper;
@@ -25,6 +21,8 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
+import java.text.DecimalFormat;
+import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
 import java.util.*;
 
@@ -44,10 +42,10 @@ public class AluguelServiceImpl extends GenericServiceImpl<AluguelRepository, Al
     private ReservaService reservaService;
 
     @Autowired
-    private ReservaRepository reservaRepository;
-
-    @Autowired
     private ReservaMapper reservaMapper;
+
+    private SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+    DecimalFormat formato = new DecimalFormat("#.##");
 
     @Override
     public AluguelDTO getById(Long id) {
@@ -66,6 +64,9 @@ public class AluguelServiceImpl extends GenericServiceImpl<AluguelRepository, Al
     @Override
     public AluguelDTO insertAluguel(AluguelDTO objDto) {
 
+        Calendar calendar = Calendar.getInstance();
+
+
         ClienteDTO clienteDTO = clienteService.getById(objDto.getCliente().getId());
 
         List<LivroDTO> livroDTOS = new ArrayList<>();
@@ -75,8 +76,9 @@ public class AluguelServiceImpl extends GenericServiceImpl<AluguelRepository, Al
 
         Aluguel obj = getModelMapper().aluguelDtoToAluguel(objDto);
 
-        obj.setDiaAlugado(LocalDateTime.now());
-        obj.setDiaDevolucao(obj.getDiaAlugado().plusDays(7));
+        obj.setDiaAlugado(dateFormat.format(calendar.getTime()));
+        calendar.add(Calendar.DAY_OF_MONTH, 2);
+        obj.setDiaDevolucao(dateFormat.format(calendar.getTime()));
 
         obj.setId(null);
         obj.getLivros().stream().forEach(l -> {
@@ -94,7 +96,7 @@ public class AluguelServiceImpl extends GenericServiceImpl<AluguelRepository, Al
                 throw new DataIntegrityException("O livro: " + l.getTitulo() + " está indisponivel. Quantidade menor que 0");
             }
         });
-        obj.setValorAlugel(obj.getLivros().stream().mapToDouble((v) -> v.getValor()).sum());
+        obj.setValorAlugel(Double.valueOf(formato.format(obj.getLivros().stream().mapToDouble((v) -> v.getValor()).sum())));
         getRepository().save(obj);
 
         Aluguel aluguel = getRepository().save(obj);
@@ -103,6 +105,8 @@ public class AluguelServiceImpl extends GenericServiceImpl<AluguelRepository, Al
 
     @Override
     public AluguelDTO transformarReservaEmAluguel(Long id) {
+        Calendar calendar = Calendar.getInstance();
+
         ReservaDTO reservaDTO = reservaService.getById(id);
         Reserva reserva = reservaMapper.reservaDtoToReserva(reservaDTO);
         reserva.getLivros().stream().forEach(l -> {
@@ -112,8 +116,9 @@ public class AluguelServiceImpl extends GenericServiceImpl<AluguelRepository, Al
 
         Aluguel aluguel = getModelMapper().reservaToAluguel(reserva);
 
-        aluguel.setDiaAlugado(LocalDateTime.now());
-        aluguel.setDiaDevolucao(aluguel.getDiaAlugado().plusDays(7));
+        aluguel.setDiaAlugado(dateFormat.format(calendar.getTime()));
+        calendar.add(Calendar.DAY_OF_MONTH, 10);
+        aluguel.setDiaDevolucao(dateFormat.format(calendar.getTime()));
 
         aluguel.setId(null);
 
@@ -125,7 +130,7 @@ public class AluguelServiceImpl extends GenericServiceImpl<AluguelRepository, Al
                 throw new DataIntegrityException("O livro: " + l.getTitulo() + " está indisponivel. Quantidade menor que 0");
             }
         });
-        aluguel.setValorAlugel(aluguel.getLivros().stream().mapToDouble((v) -> v.getValor()).sum());
+        aluguel.setValorAlugel(Double.valueOf(formato.format(aluguel.getLivros().stream().mapToDouble((v) -> v.getValor()).sum())));
 
         getRepository().save(aluguel);
         return getModelMapper().aluguelToAluguelDTO(aluguel);

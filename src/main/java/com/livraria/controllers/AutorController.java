@@ -47,13 +47,13 @@ public class AutorController extends GenericController<AutorService>{
                 .path("/{id}").buildAndExpand(autorDTO.getId()).toUri();
         return ResponseEntity.created(uri).body(autorDTO);
     }
-
+    @CrossOrigin(origins = "*")
     @PutMapping(value = "/autores/{id}")
     public ResponseEntity<Void> update(@RequestBody AutorDTO obj, @PathVariable Long id) {
         getService().update(obj, id);
         return ResponseEntity.noContent().build();
     }
-
+    @CrossOrigin(origins = "*")
     @DeleteMapping(value = "/autores/{id}")
     public ResponseEntity<Void> delete(@PathVariable Long id) {
         getService().delete(id);

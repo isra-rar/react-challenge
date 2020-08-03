@@ -47,13 +47,13 @@ public class EnderecoController extends GenericController<EnderecoService> {
                 .path("/{id}").buildAndExpand(enderecoDTO.getId()).toUri();
         return ResponseEntity.created(uri).body(enderecoDTO);
     }
-
+    @CrossOrigin(origins = "*")
     @PutMapping(value = "/enderecos/{id}")
     public ResponseEntity<Void> update(@RequestBody EnderecoDTO obj, @PathVariable Long id) {
         getService().update(obj, id);
         return ResponseEntity.noContent().build();
     }
-
+    @CrossOrigin(origins = "*")
     @DeleteMapping(value = "/enderecos/{id}")
     public ResponseEntity<Void> delete(@PathVariable Long id) {
         getService().delete(id);

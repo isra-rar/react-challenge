@@ -1,12 +1,8 @@
 package com.livraria.controllers;
 
-import com.livraria.dto.AutorDTO;
 import com.livraria.dto.LivroDTO;
-import com.livraria.entities.Autor;
 import com.livraria.entities.Livro;
-import com.livraria.mappers.AutorMapper;
 import com.livraria.mappers.LivroMapper;
-import com.livraria.services.AutorService;
 import com.livraria.services.LivroService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -16,6 +12,7 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import javax.validation.Valid;
 import java.net.URI;
+import java.util.Collection;
 import java.util.List;
 
 @RestController
@@ -50,13 +47,13 @@ public class LivroController extends GenericController<LivroService>{
                 .path("/{id}").buildAndExpand(livroDTO.getId()).toUri();
         return ResponseEntity.created(uri).body(livroDTO);
     }
-
+    @CrossOrigin(origins = "*")
     @PutMapping(value = "/livros/{id}")
     public ResponseEntity<Void> update(@RequestBody LivroDTO obj, @PathVariable Long id) {
         getService().update(obj, id);
         return ResponseEntity.noContent().build();
     }
-
+    @CrossOrigin(origins = "*")
     @DeleteMapping(value = "/livros/{id}")
     public ResponseEntity<Void> delete(@PathVariable Long id) {
         getService().delete(id);

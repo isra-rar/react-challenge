@@ -1,9 +1,6 @@
 package com.livraria.services.impl;
 
-import com.livraria.dto.AluguelDTO;
-import com.livraria.dto.ClienteDTO;
-import com.livraria.dto.LivroDTO;
-import com.livraria.dto.ReservaDTO;
+import com.livraria.dto.*;
 import com.livraria.entities.Aluguel;
 import com.livraria.entities.Livro;
 import com.livraria.entities.Reserva;
@@ -25,9 +22,10 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalDateTime;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.Calendar;
 import java.util.List;
 import java.util.Optional;
 
@@ -52,6 +50,8 @@ public class ReservaServiceImpl extends GenericServiceImpl<ReservaRepository, Re
     @Autowired
     private AluguelMapper aluguelMapper;
 
+    private SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+
     @Override
     public ReservaDTO getById(Long id) {
         Optional<Reserva> obj = getRepository().findById(id);
@@ -69,6 +69,8 @@ public class ReservaServiceImpl extends GenericServiceImpl<ReservaRepository, Re
     @Override
     public ReservaDTO insert(ReservaDTO objDto) {
 
+        Calendar calendar = Calendar.getInstance();
+
         ClienteDTO clienteDTO = clienteService.getById(objDto.getCliente().getId());
 
         List<LivroDTO> livroDTOS = new ArrayList<>();
@@ -78,7 +80,7 @@ public class ReservaServiceImpl extends GenericServiceImpl<ReservaRepository, Re
 
         Reserva obj = getModelMapper().reservaDtoToReserva(objDto);
 
-        obj.setDiaReserva(LocalDateTime.now());
+        obj.setDiaReserva(dateFormat.format(calendar.getTime()));
         obj.setRetirado(false);
         obj.setCancelado(false);
         obj.setId(null);
@@ -104,10 +106,12 @@ public class ReservaServiceImpl extends GenericServiceImpl<ReservaRepository, Re
 
     @Override
     public void retirarReserva(Long id) {
+        Calendar calendar = Calendar.getInstance();
+
         ReservaDTO reservaDTO = getById(id);
         Reserva reserva = getModelMapper().reservaDtoToReserva(reservaDTO);
 
-        reserva.setDiaRetirada(LocalDateTime.now());
+        reserva.setDiaRetirada(dateFormat.format(calendar.getTime()));
         reserva.setRetirado(true);
 
         AluguelDTO aluguelDTO = aluguelService.transformarReservaEmAluguel(id);

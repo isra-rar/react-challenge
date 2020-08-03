@@ -46,12 +46,14 @@ public class ClienteController extends GenericController<ClienteService> {
         return ResponseEntity.created(uri).body(clienteDTO);
     }
 
+    @CrossOrigin(origins = "*")
     @PutMapping(value = "/clientes/{id}")
     public ResponseEntity<Void> update(@RequestBody ClienteDTO obj, @PathVariable Long id) {
         getService().update(obj, id);
         return ResponseEntity.noContent().build();
     }
 
+    @CrossOrigin(origins = "*")
     @DeleteMapping(value = "/clientes/{id}")
     public ResponseEntity<Void> delete(@PathVariable Long id) {
         getService().delete(id);
